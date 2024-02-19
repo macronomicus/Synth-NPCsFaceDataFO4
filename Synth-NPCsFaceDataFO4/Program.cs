@@ -2,7 +2,7 @@ using Mutagen.Bethesda;
 using Mutagen.Bethesda.Synthesis;
 using Mutagen.Bethesda.Fallout4;
 
-namespace Synth-NPCsFaceDataFO4
+namespace SynthNPCsFaceDataFO4
 {
     public class Program
     {
