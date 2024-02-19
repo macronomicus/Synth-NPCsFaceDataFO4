@@ -9,11 +9,13 @@ namespace SynthNPCsWithFaces
     {
         public static HashSet<string> StockESMs = new(comparer: StringComparer.InvariantCultureIgnoreCase)
         {
-            "Skyrim.esm",
-            "Update.esm",
-            "Dawnguard.esm",
-            "HearthFires.esm",
-            "Dragonborn.esm"
+            "Fallout4.esm",
+            "DLCRobot.esm",
+            "DLCworkshop01.esm",
+            "DLCCoast.esm",
+            "DLCWorkshop02.esm",
+            "DLCWorkshop03.esm",
+            "DLCNukaWorld.esm"
         };
         public static IEnumerable<T> NoStockRecords<T>(this IEnumerable<T> records) where T : IMajorRecordGetter
         {

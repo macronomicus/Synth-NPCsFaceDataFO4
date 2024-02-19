@@ -1,7 +1,7 @@
 {
   "Nickname": "SynthNPCsWithFaces",
   "Visibility": "Visible",
-  "OneLineDescription": "Helper patcher for TPF",
+  "OneLineDescription": "Helper patcher for Genning Faces for Fallout4",
   "LongDescription": "Creates a new plugin with all the modified NPC records, useful for building NPC merges",
   "PreferredAutoVersioning": "Default",
   "RequiredMods": []

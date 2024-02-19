@@ -2,8 +2,9 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Mutagen.Bethesda;
-using Mutagen.Bethesda.Skyrim;
+using Mutagen.Bethesda.Fallout4;
 using Mutagen.Bethesda.Synthesis;
+
 
 namespace SynthNPCsWithFaces
 {
@@ -11,19 +12,19 @@ namespace SynthNPCsWithFaces
     {
         public static async Task<int> Main(string[] args)
         {
-            return await SynthesisPipeline.Instance.AddPatch<ISkyrimMod, ISkyrimModGetter>(RunPatch).Run(args, new RunPreferences()
+            return await SynthesisPipeline.Instance.AddPatch<IFallout4Mod, IFallout4ModGetter>(RunPatch).Run(args, new RunPreferences()
             {
                 ActionsForEmptyArgs = new RunDefaultPatcher()
                 {
                     IdentifyingModKey = "SynthNPCsWithFaces.esp",
-                    TargetRelease = GameRelease.SkyrimSE,
+                    TargetRelease = GameRelease.Fallout4,
                 }
             });
 
 
         }
         
-        public static void RunPatch(IPatcherState<ISkyrimMod, ISkyrimModGetter> state)
+        public static void RunPatch(IPatcherState<IFallout4Mod, IFallout4ModGetter> state)
         {
             var races = state.LoadOrder.PriorityOrder.Race()
                 .WinningOverrides()
